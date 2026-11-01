@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+backend/target/
+
+# Environment variables and sensitive configurations
+.env
+.env.*
+!.env.example
+.npmrc
+
+# TypeScript build info cache
+*.tsbuildinfo
+
+# IDE and Editor configs
+.idea/
+.vscode/
+
+# Logs
+*.log
