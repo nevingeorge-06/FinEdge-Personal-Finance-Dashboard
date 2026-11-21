@@ -9,7 +9,6 @@ import {
   EyeOff,
   AlertCircle,
   CheckCircle2,
-  Sparkles,
 } from 'lucide-react';
 import { authService } from '../../api/authService';
 import { User } from '../../types/auth';
@@ -97,14 +96,6 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onAuthSuccess }) => {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const handleFillDemo = () => {
-    setEmail('alex.morgan@finedge.io');
-    setPassword('password123');
-    setFullName('Alex Morgan');
-    setErrors({});
-    setErrorMessage(null);
   };
 
   return (
@@ -304,24 +295,6 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onAuthSuccess }) => {
               )}
             </button>
           </form>
-
-          {/* Demo Credentials */}
-          <div className="mt-5 pt-4 border-t" style={{ borderColor: '#D8C6B2' }}>
-            <button
-              type="button"
-              onClick={handleFillDemo}
-              className="w-full flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-medium transition-colors"
-              style={{ backgroundColor: 'rgba(118,81,60,0.06)', border: '1px solid #D8C6B2', color: '#78685B' }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#EADCCB'; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(118,81,60,0.06)'; }}
-            >
-              <Sparkles className="w-3.5 h-3.5" style={{ color: '#76513C' }} />
-              <span>Fill Demo Credentials</span>
-            </button>
-            <p className="text-center text-[11px] mt-2" style={{ color: '#CBAF96' }}>
-              Demo: alex.morgan@finedge.io / password123
-            </p>
-          </div>
         </div>
 
         {/* Footer note */}
